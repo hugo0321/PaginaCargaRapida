@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios de Mensajería</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <style>
+    /* Reset de márgenes y padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #d9eaff; 
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding-top: 20px;
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+      transition: width 0.3s;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+      border-bottom: 1px solid #34495e;
+      padding-bottom: 10px;
+    }
+
+    .sidebar h2 img {
+      width: 50px; /* Tamaño del logo */
+      vertical-align: middle;
+    }
+
+    .sidebar h2 span {
+      display: inline-block;
+      margin-left: 10px; /* Espacio entre el logo y el texto */
+      vertical-align: middle;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #bdc3c7;
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+      color: #ecf0f1;
+    }
+
+    /* Contenedor del contenido y servicios */
+    .main-container {
+      margin-left: 250px; /* Igual al ancho de la sidebar */
+      padding: 20px;
+      flex: 1;
+    }
+
+    .services-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Espacio entre las imágenes */
+    }
+
+    .service-item {
+      flex: 1 1 calc(50% - 20px); /* 2 columnas */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: #fff;
+      overflow: hidden;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+      transition: transform 0.2s;
+    }
+
+    .service-item:hover {
+      transform: scale(1.02);
+    }
+
+    .service-item img {
+      width: 100%;
+      height: 200px; /* Altura fija para uniformidad */
+      object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+      border-radius: 4px;
+    }
+
+    .service-item p {
+      margin-top: 10px;
+      color: #333;
+      height: 50px; /* Altura fija para las descripciones */
+      overflow: hidden; /* Oculta el texto que exceda la altura */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Responsividad */
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+
+      .main-container {
+        margin-left: 200px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .main-container {
+        margin-left: 0;
+      }
+
+      .service-item {
+        flex: 1 1 100%; /* Ajusta los elementos a 100% del ancho */
+      }
+    }
+
+    /* Estilos para el modal con Panzoom */
+    .modal-body {
+      position: relative;
+      overflow: hidden;
+      display: flex; /* Usar flexbox */
+      align-items: center; /* Centrar verticalmente */
+      justify-content: center; /* Centrar horizontalmente */
+      background-color: #000; /* Fondo negro para mejor contraste */
+      padding: 0; /* Eliminar padding para evitar desplazamientos */
+    }
+
+    #modalImage {
+      max-width: 100%;
+      max-height: 80vh; /* Limitar la altura para evitar desbordamientos */
+      transition: transform 0.2s;
+      display: block;
+      margin: auto; 
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>
+      <img src="Imagenes/Logo.png" alt="Logo">
+      <span>Carga Rápida</span>
+    </h2>
+    <a href="index.html">Inicio</a>
+    <a href="PrácticaCargaRápida.html">Base de datos Carga Rápida</a>
+    <a href="PrácticaMateriasUniversidad.html">Base de datos materias universitarias</a>
+    <a href="#clientes">Clientes</a>
+    <a href="contactos.html">Contáctanos</a>
+  </div>
+
+  <!-- Contenedor Principal -->
+  <div class="main-container">
+    <div class="container">
+      <h1 class="text-center mb-4">Práctica Materias Universitarias</h1>
+      <!-- Nueva imagen adicional -->
+      <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+        <img src="ImágenesBDUniversidad/BDMateriasUniversidad.png" alt="Nuevo Servicio">
+        <p>Base de Datos Materias Universitarias</p>
+      </div>
+      <div class="services-wrapper">
+        <!-- 11 Service Items -->
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 1.png" alt="Servicio 1">
+          <p>Encontrar la materia con el nombre igual a Estructura de Datos 2</p>
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 2.png" alt="Servicio 2">
+          <p>Encontrar materias con más de 3 créditos</p>
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 3.png" alt="Servicio 3">
+          <p>Encontrar materias con 3 o más horas teóricas</p>
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 4.png" alt="Servicio 4">
+          <p>Encontrar materias con menos de 1 hora práctica</p>
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 5.png" alt="Servicio 5">
+          <p>Encontrar códigos de materia inferior o igual al código 8105</p>
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 6.png" alt="Servicio 6">
+          <p style="font-size: 12px;">Encontrar materias donde el profesor responsable no sea la profesora Marcela Gómez</p>
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 7.png" alt="Servicio 7">
+          <p>Encontrar materias asignadas a las aulas 601 o 602</p>
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 8.png" alt="Servicio 8">
+          <p>Encontrar materias que no están asignadas a las aulas 601, 603 o 604</p>
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 9.png" alt="Servicio 9">
+          <p style="font-size: 12px;">Encontrar materias de un crédito y PromedioCalificaciones >= 3.0 es decir que la materia esté pasada</p>
+
+        </div>
+        <div class="service-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="ImágenesBDUniversidad/Comando 10.png" alt="Servicio 10">
+          <p>Eliminar materia Visión Empresarial</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal con Zoom -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl"> <!-- Tamaño extra grande para mejor visualización -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Salida MongoDB</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-footer">
+          <button id="resetButton" class="btn btn-secondary">Restablecer Imagen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <!-- Panzoom JS -->
+  <script src="https://unpkg.com/@panzoom/panzoom@4.4.3/dist/panzoom.min.js"></script>
+
+  <script>
+    // Obtener todos los elementos service-item
+    const serviceItems = document.querySelectorAll('.service-item');
+    const modalImage = document.getElementById('modalImage');
+    const resetButton = document.getElementById('resetButton');
+    let panzoomInstance = null;
+
+    serviceItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const imgSrc = item.querySelector('img').getAttribute('src');
+        modalImage.src = imgSrc;
+        modalImage.alt = item.querySelector('p').innerText;
+      });
+    });
+
+    // Inicializar Panzoom cuando el modal se muestre
+    const imageModal = document.getElementById('imageModal');
+
+    imageModal.addEventListener('shown.bs.modal', () => {
+      // Reiniciar cualquier transformación previa
+      modalImage.style.transform = 'none';
+
+      // Inicializar Panzoom
+      panzoomInstance = Panzoom(modalImage, {
+        maxScale: 5,
+        startScale: 1,
+        cursor: 'default', // Cambiado a 'default' para que no se vea el cursor de mover
+      });
+
+      // Habilitar el gesto de pinch en dispositivos táctiles
+      // Añadir soporte para rueda del ratón
+      modalImage.parentElement.addEventListener('wheel', panzoomInstance.zoomWithWheel);
+    });
+
+    // Destruir Panzoom cuando el modal se cierre
+    imageModal.addEventListener('hidden.bs.modal', () => {
+      if (panzoomInstance) {
+        panzoomInstance.destroy();
+        panzoomInstance = null;
+      }
+      modalImage.style.transform = 'none';
+    });
+
+    // Restablecer la imagen al estado inicial
+    resetButton.addEventListener('click', () => {
+      if (panzoomInstance) {
+        panzoomInstance.reset();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página Principal Carga Rápida</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+    /* Reset de márgenes y padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #d9eaff; 
+    }
+  
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding-top: 20px;
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+      transition: width 0.3s;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+      border-bottom: 1px solid #34495e;
+      padding-bottom: 10px;
+    }
+
+    .sidebar h2 img {
+      width: 50px; /* Tamaño del logo */
+      vertical-align: middle;
+    }
+
+    .sidebar h2 span {
+      display: inline-block;
+      margin-left: 10px; /* Espacio entre el logo y el texto */
+      vertical-align: middle;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #bdc3c7;
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+      color: #ecf0f1;
+    }
+
+    /* Contenedor del contenido y carrusel */
+    .main-container {
+      margin-left: 250px; /* Igual al ancho de la sidebar */
+      padding: 20px;
+      flex: 1;
+    }
+
+    .carousel-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .image-text-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .image-text {
+      text-align: center;
+    }
+
+    .image-text img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsividad */
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+
+      .main-container {
+        margin-left: 200px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .main-container {
+        margin-left: 0;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>
+      <img src="Imagenes/Logo.png" alt="Logo">
+      <span>Carga Rápida</span>
+    </h2>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Nuestros servicios</a>
+   <a href="PrácticaMateriasUniversidad.html">Base de datos materias universitarias</a>
+   <a href="contactos.html">Contáctanos</a>
+    <a href="#BASE DE DATOS CARGA RAPIDA">Base de datos</a>
+    <a href="#Comando 1">Comando 1</a>
+    <a href="#Comando 2">Comando 2</a>
+    <a href="#Comando 3">Comando 3</a>
+    <a href="#Comando 4">Comando 4</a>
+    <a href="#Comando 5">Comando 5</a>
+    <a href="#Comando 6">Comando 6</a>
+    <a href="#Comando 7">Comando 7</a>
+    <a href="#Comando 8">Comando 8</a>
+    <a href="#Comando 9">Comando 9</a>
+    <a href="#Comando 10">Comando 10</a>
+    <a href="#Comando 11">Comando 11</a>
+    <a href="#Comando 12">Comando 12</a>
+    <a href="#Comando 13">Comando 13</a>
+    <a href="#Comando 14">Comando 14</a>
+    <a href="#Comando 15">Comando 15</a>
+    <a href="#Comando 16">Comando 16</a>
+    <a href="#Comando 17">Comando 17</a>
+    <a href="#Comando 18">Comando 18</a>
+    <a href="#Comando 19">Comando 19</a>
+    <a href="#Comando 20">Comando 20</a>
+  </div>
+
+  <!-- Contenedor Principal -->
+  <div class="main-container">
+    <!-- Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-wrapper">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Imagenes/Imagen1.png" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="Imagenes/Imagen2.png" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="Imagenes/Imagen3.png" class="d-block w-100" alt="Slide 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Vision y mision-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 image-text-wrapper">
+          <img src="Imagenes/misionn.png" alt="Imagen mision">
+          <div class="image-text">Somos una red logística comprometida con la confiabilidad y la puntualidad, dedicada a conectar negocios y personas. Exploramos constantemente nuevos mercados y servicios tanto a nivel nacional como internacional, con el objetivo de asegurar una rentabilidad sostenible que respalde nuestra solidez y permanencia a largo plazo.</div>
+        </div>
+        <div class="col-md-6 image-text-wrapper">
+          <img src="Imagenes/Vision.png" alt="Imagen vision">
+          <div class="image-text">Para el 2036 seremos la red logística preferida, impulsando el crecimiento de empresas y personas al facilitar el progreso con soluciones efectivas. Comprometidos con la innovación y la excelencia, estamos abiertos al mundo para explorar nuevas oportunidades y ofrecer servicios que respondan a las necesidades del mercado global.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Título -->
+    <div class="container">
+      <h1 id="BASE DE DATOS CARGA RAPIDA" class="text-center">BASE DE DATOS CARGA RAPIDA</h1>
+      <div class="text-center">
+        <img src="Imagenes/BaseDeDatos.png" alt="Imagen Base de Datos" class="img-fluid">
+      </div>
+    </div>
+
+    
+    <div class="container">
+      
+      <div class="image-text-wrapper">
+        <h2 id="Comando 1">1.Encontrar todos los documentos donde el costo sea igual a 80000" </h2>
+        <img src="Imagenes Practica/1.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ costo: { $eq: 80000 } }); busca documentos en la colección transportadora donde el campo costo sea exactamente igual a 80,000. El operador $eq significa "igual a", por lo que la consulta devolverá todos los registros que tengan ese valor exacto en el campo costo. Esto es útil para identificar transportes con un costo específico de 80,000, facilitando la búsqueda de envíos con ese monto exacto.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 2">2.Encontrar todos los documentos donde el costo sea mayor o igual a 180000 </h2>
+        <img src="Imagenes Practica/2.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ costo: { $gte: 180000 } }); busca documentos en la colección transportadora donde el campo costo sea mayor o igual a 180,000. El operador $gte significa "greater than or equal" (mayor o igual a), por lo que la consulta devolverá todos los registros cuyo costo sea 180,000 o superior. Esta consulta es útil para analizar los transportes más costosos, filtrando aquellos que tienen un valor igual o superior al umbral establecido.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 3">3.Encontrar todos los documentos donde el costo sea mayor a 170000 </h2>
+        <img src="Imagenes Practica/3.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ costo: { $gt: 170000 } }); busca documentos en la colección transportadora donde el campo costo sea mayor a 170,000. El operador $gt significa "greater than" (mayor que), por lo que la consulta devolverá todos los registros cuyo costo supere los 170,000. Esto es útil para identificar y analizar transportes cuyo costo es superior a ese umbral, permitiendo enfocar la atención en los envíos más caros.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 4">4.Encontrar todos los documentos donde el costo sea menor a 35000 </h2>
+        <img src="Imagenes Practica/4.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ costo: { $lt: 35000 } }); busca documentos en la colección transportadora donde el campo costo sea menor a 35,000. El operador $lt significa "less than" (menor que), por lo que la consulta devolverá todos los registros cuyo costo sea inferior a 35,000. Esto es útil para identificar y analizar transportes que tienen un costo bajo, facilitando la evaluación de opciones de transporte más económicas.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 5">5.Encontrar todos los documentos donde el costo esté en el rango de 20000 a 50000 </h2>
+        <img src="Imagenes Practica/5.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ costo: { $in: [20000, 30000, 40000, 50000] } }); busca documentos en la colección transportadora donde el campo costo coincida con cualquiera de los valores especificados en el array [20000, 30000, 40000, 50000]. El operador $in se utiliza para seleccionar documentos cuyos valores en el campo costo estén dentro de ese conjunto de valores. Esta consulta es útil para recuperar transportes con costos específicos de 20,000, 30,000, 40,000 o 50,000, permitiendo filtrar por varios montos exactos.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 6">6.Encontrar todos los documentos donde el costo sea menor o igual a 30000      </h2>
+        <img src="Imagenes Practica/6.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ costo: { $lte: 30000 } }); busca documentos en la colección transportadora donde el campo costo sea menor o igual a 30,000. El operador $lte significa "less than or equal to" (menor o igual a), por lo que la consulta devolverá todos los registros cuyo costo sea 30,000 o inferior. Esto es útil para identificar transportes con costos bajos o accesibles, ayudando a enfocar la atención en opciones económicas.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 7">7.Encontrar todos los documentos donde el estado no sea 'Entregado' y su destino sea "Barranquilla" </h2>
+        <img src="Imagenes Practica/7.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ estado: { $ne: 'Entregado' }, destino: 'Barranquilla' }); busca documentos en la colección transportadora que cumplan dos condiciones simultáneamente. Filtra los documentos donde el campo estado no sea 'Entregado' (usando el operador $ne que significa "not equal") y donde el campo destino sea 'Barranquilla'. Esto permite recuperar registros de transporte cuyo destino es Barranquilla y que aún no han sido entregados, facilitando la identificación de envíos que están en proceso o pendientes para ese destino específico.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 8">8.Encontrar todos los documentos donde se tenga en la lista 'Domesa', 'BY TREND' </h2>
+        <img src="Imagenes Practica/8.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({$and: [ { TipoTransporte: { $ne: 'aéreo' } }, { origen: 'Cúcuta' }]}); busca documentos en la colección transportadora que cumplan dos condiciones simultáneamente. Primero, filtra los documentos donde el campo TipoTransporte no sea 'aéreo' y, segundo, selecciona solo aquellos cuyo campo origen sea 'Cúcuta'. Así, el comando recupera registros de transporte que no utilizan el modo aéreo y que tienen Cúcuta como punto de origen, lo cual puede ser útil para analizar opciones de transporte terrestre desde esa ciudad.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 9">9.Encontrar todos los documentos donde el tipo de servicio sea 'Paquetería' y el estado sea 'En tránsito' </h2>
+        <img src="Imagenes Practica/9.omando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ $and: [{ tipoServicio: 'Paquetería' }, { estado: 'En tránsito' }] }); busca documentos en la colección transportadora que cumplan ambas condiciones simultáneamente. Filtra aquellos documentos donde el campo tipoServicio sea 'Paquetería' y el campo estado sea 'En tránsito'. Esto recupera los registros de transporte que están en curso (en tránsito) y que ofrecen un servicio de paquetería, lo cual puede ser útil para gestionar o analizar envíos actuales de ese tipo de servicio.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 10">10.Encontrar todos los documentos donde el tipo de servicio sea 'Logística' o 'Carga' y tengan de origen Bucaramanga </h2>
+        <img src="Imagenes Practica/10.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ tipoServicio: { $in: ['Logística', 'Carga'] }, origen: 'Bucaramanga' }); busca documentos en la colección transportadora que cumplan dos condiciones. Primero, filtra aquellos documentos donde el campo tipoServicio sea 'Logística' o 'Carga' (utilizando el operador $in para especificar varios valores posibles). Segundo, selecciona solo los documentos cuyo campo origen sea 'Bucaramanga'. Esto permite recuperar registros de transporte que ofrecen servicios de logística o carga y que tienen Bucaramanga como punto de origen, facilitando la identificación de transportes específicos para esa ciudad.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 11">11.Encontrar todos los envios que sean diferentes a transporte "aéreo" y sean desde "Cúcuta" </h2>
+        <img src="Imagenes Practica/11.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({$and: [ { TipoTransporte: { $ne: 'aéreo' } }, { origen: 'Cúcuta' }]}); busca documentos en la colección transportadora que cumplan dos condiciones simultáneamente. Primero, filtra los documentos donde el campo TipoTransporte no sea 'aéreo' y, segundo, selecciona solo aquellos cuyo campo origen sea 'Cúcuta'. Así, el comando recupera registros de transporte que no utilizan el modo aéreo y que tienen Cúcuta como punto de origen, lo cual puede ser útil para analizar opciones de transporte terrestre desde esa ciudad.</div>
+      </div>
+      
+      <div class="image-text-wrapper">
+        <h2 id="Comando 12">12.Encontrar todos los documentos donde el destino sea 'Bogotá' y el estado sea 'Pendiente' </h2>
+        <img src="Imagenes Practica/12.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ $and: [{ destino: 'Bogotá' }, { estado: 'Pendiente' }] }); recupera documentos de la colección transportadora que cumplen dos condiciones simultáneamente. Filtra los documentos cuyo campo destino es 'Bogotá' y cuyo campo estado es 'Pendiente'. Es decir, busca registros de transporte destinados a Bogotá que aún están pendientes, lo cual puede ser útil para identificar y gestionar envíos que necesitan atención o seguimiento en ese destino específico.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 13">13.Encontrar todos los documentos donde el costo sea entre 100000 y 200000, excluyendo aquellos con estado 'En tránsito':
+        </h2>
+        <img src="Imagenes Practica/13.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ $and: [{ costo: { $gte: 100000, $lte: 200000 } }, { estado: { $ne: 'En tránsito' } }] }); busca documentos en la colección transportadora que cumplan dos condiciones simultáneamente. Primero, filtra aquellos documentos en los que el campo costo esté entre 100,000 y 200,000 (inclusive). Segundo, excluye los documentos cuyo campo estado sea 'En tránsito'. Así, la consulta recupera registros de transporte con un costo dentro del rango especificado y que no estén actualmente en tránsito, lo cual puede ser útil para analizar costos de transporte que ya han sido completados o están en un estado diferente.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 14">14.Encontrar todos los documentos donde el cliente sea 'La Cali' o el destino sea 'Nariño':
+        </h2>
+        <img src="Imagenes Practica/14.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ $or: [{ nombre: 'La Cali' }, { destino: 'Nariño' }] }); busca documentos en la colección transportadora que cumplan al menos una de las dos condiciones. Utiliza el operador $or para filtrar documentos donde el campo nombre sea 'La Cali' o donde el campo destino sea 'Nariño'. El resultado incluirá tanto transportes realizados por la empresa con el nombre 'La Cali', como aquellos cuyo destino sea 'Nariño', cubriendo ambas posibilidades en una sola consulta. Esto es útil para obtener una visión más amplia de los transportes basados en el nombre o el destino.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 15">15.Encontrar todos los documentos donde el costo sea exactamente 35000 y el estado sea 'Entregado' </h2>
+        <img src="Imagenes Practica/15.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ $and: [{ costo: 35000 }, { estado: 'Entregado' }] }); busca documentos en la colección transportadora que cumplan ambas condiciones simultáneamente. Filtra aquellos documentos cuyo campo costo sea exactamente 35,000 y cuyo campo estado sea 'Entregado'. Esto permite identificar los transportes que han sido entregados y cuyo costo fue de 35,000, lo que puede ser útil para analizar entregas específicas con un valor fijo.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 16">16.Encontrar todos los documentos donde el tipo de servicio sea 'Carga' y el costo sea mayor a 150000" </h2>
+        <img src="Imagenes Practica/16.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ $and: [{ tipoServicio: 'Carga' }, { costo: { $gt: 150000 } }] }); busca documentos en la colección transportadora que cumplan dos condiciones simultáneamente. Filtra aquellos documentos donde el campo tipoServicio sea 'Carga' y el campo costo sea mayor a 150,000. Esto recupera transportes que ofrecen servicios de carga cuyo costo excede los 150,000, permitiendo analizar envíos más costosos dentro de ese tipo de servicio.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 17">17.Encontrar todos los documentos donde el nombre sea 'Valladolid' y el estado sea 'En tránsito'" </h2>
+        <img src="Imagenes Practica/17.comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ $and: [{ nombre: 'Valladolid' }, { estado: 'En tránsito' }] }); busca documentos en la colección transportadora que cumplan dos condiciones simultáneamente. Filtra los documentos donde el campo nombre sea 'Valladolid' y el campo estado sea 'En tránsito'. Esto permite obtener registros de transportes que están en curso (en tránsito) y que son realizados por la empresa o servicio denominado 'Valladolid', útil para monitorear transportes activos de esa empresa.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 18">18.Encontrar todos los documentos donde el tipo de servicio sea 'Paquetería' y el origen sea 'Bogotá' </h2>
+        <img src="Imagenes Practica/11.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({$and: [ { TipoTransporte: { $ne: 'aéreo' } }, { origen: 'Cúcuta' }]}); busca documentos en la colección transportadora que cumplan dos condiciones simultáneamente. Primero, filtra los documentos donde el campo TipoTransporte no sea 'aéreo' y, segundo, selecciona solo aquellos cuyo campo origen sea 'Cúcuta'. Así, el comando recupera registros de transporte que no utilizan el modo aéreo y que tienen Cúcuta como punto de origen, lo cual puede ser útil para analizar opciones de transporte terrestre desde esa ciudad.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 19">19.Encontrar todos los documentos donde el costo sea menor a 60000 y el tipo de transporte sea 'terrestre'" </h2>
+        <img src="Imagenes Practica/19.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ $and: [ { costo: { $lt: 60000 } }, { TipoTransporte: 'aéreo' }] }); busca documentos en la colección transportadora que cumplan dos condiciones simultáneamente. Filtra aquellos documentos donde el campo costo sea menor a 60,000 y el campo TipoTransporte sea 'aéreo'. Esto permite recuperar transportes aéreos cuyo costo sea inferior a 60,000, útil para analizar opciones de transporte aéreo más económicas.</div>
+      </div>
+      <div class="image-text-wrapper">
+        <h2 id="Comando 20">20.Encontrar todos los envios que tengan de destino "Tumaco" y tengan un tipo de transporte "aéreo" </h2>
+        <img src="Imagenes Practica/20.Comando.png" alt="Imagen 1">
+        <div class="image-text">El comando MongoDB db.transportadora.find({ destino: "Tumaco", TipoTransporte: "aéreo" }).pretty(); busca documentos en la colección transportadora que cumplan dos condiciones: aquellos en los que el campo destino sea 'Tumaco' y el campo TipoTransporte sea 'aéreo'. La función .pretty() formatea la salida para que sea más legible. Esta consulta es útil para identificar transportes aéreos cuyo destino final sea Tumaco, lo que puede ayudar a gestionar o analizar envíos específicos hacia esa ciudad.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
